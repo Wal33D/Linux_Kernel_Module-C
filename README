@@ -1,0 +1,39 @@
+Hello CS 4540 Students,
+
+Here's Assignment 5, due on Elearning at 23:59 p.m. on Dec.4 (Thursday).
+
+The program involves modifying the internals of a working OS. You will 
+write, load, and unload a Ubuntu(Linux) kernel module.
+
+The specs are very long since--in addition to specifications for your 
+program--they include examples, explanations, hints, and background 
+information.
+
+Contents of A5:
+---------------
+    Part I—Creating a Simple Kernel Module
+       I.1. An Illustrative Program for a Simple Kernel Module
+       I.2. Loading and Removing Kernel Modules
+    Part II—Creating a Kernel Module Using Kernel Data Structures
+       II.1. A Kernel struct and its Description
+       II.2. Inserting Elements into the Kernel Linked List
+       II.3. Traversing the Kernel Linked List
+       II.4. Removing Elements from the Kernel Linked List
+    Part III—Implement Simple Kernel Module Using Illustrative Program
+    Part IV—Implement Linked List Kernel Module
+    Part V—Hints
+    Part VI—Additional Background Information
+
+
+The solution must be compiled and run on Ubuntu under Oracle VirtualBox.
+
+Remember about the C style and submission guidelines 
+
+
+
+
+
+
+
+
+
