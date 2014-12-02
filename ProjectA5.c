@@ -1,15 +1,21 @@
+/*  
+ *  hello-1.c - The simplest kernel module.
+ */
+#include <linux/module.h>	/* Needed by all modules */
+#include <linux/kernel.h>	/* Needed for KERN_INFO */
 #include <linux/init.h>
-#include <linux/kernel.h>
-#include <linux/module.h>
-/* This function is called when the module is loaded. */
-int simple_init(void)
-{
-printk(KERN INFO "Removing Module\n");
-}
-/* Macros for registering module entry and exit points. */
-module init(simple_init);
-module exit(simple_exit);
 
-MODULE LICENSE("GPL");
-MODULE DESCRIPTION("Simple Module");
-MODULE AUTHOR("SGG");
+
+/* This function is called when the module is loaded. */
+int init_module(void)
+{
+	printk(KERN_INFO "Removing Module\n");
+
+	/* 
+	 * A non 0 return means init_module failed; module can't be loaded. 
+	 */
+	return 0;
+}
+
+
+	
