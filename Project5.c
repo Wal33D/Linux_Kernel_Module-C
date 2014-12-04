@@ -1,8 +1,32 @@
-/*  
- *  hello-3.c - Illustrating the __init, __initdata and __exit macros.
- *  
- *
- */
+/**************************************************************************************
+* Course: CS 4540 – Operating Systems – Fall 2014
+* Assignment <5>  – Process Synchronization
+* Name: <Waleed Gudah>
+* E-mail: <waleed.h.gudah@wmich.edu>
+* Submitted: <12/3/14>
+
+   This program, upon loading, initializes the birthday struct vallues, 
+   allocates memory for a struct element and creates 
+   and inserts 6 birthdays into the list. 
+   Then prints each birthday to to the kernel log. 
+   Unloading prints the list of birthdays being removed, and 
+   then deletes the list from kernel memory    
+
+ NOTE: 
+        Makefile includes several commands
+
+        "make" to compile
+
+        "make load" to load kernel module
+        
+        "make unload" to unload kernel module
+        
+        "make view to run the dmesg command"
+        
+        "make clear" to clear kernel log 
+
+/****************************************************************************************/
+
 
 #include <linux/module.h>   /* Needed by all modules  */
 #include <linux/kernel.h>   /* Needed for KERN_INFO   */
@@ -11,12 +35,12 @@
 #include <linux/types.h>    /* Needed for list macros */
 #include <linux/slab.h>     /* Needed for Kernel */
 
-#define DRIVER_AUTHOR       "Waleed Gudah"
-#define DRIVER_DESC         "LinuxKernelModule-A5"
-#define DRIVER_LICE         "GPL"
+#define DRIVER_AUTHOR       "Waleed Gudah" /* My name */
+#define DRIVER_DESC         "LinuxKernelModule-A5" /* Description of this Kernel */
+#define DRIVER_LICE         "GPL" /* License Info */
 #define NUM_OF_BIRTHDAYS    6
 
-/* Example struct we will use. */
+/* Birthday struct  */
 typedef struct _birthday {
     
     int day;
@@ -29,7 +53,13 @@ typedef struct _birthday {
 /* Declare and init the head of the linked list. */
 LIST_HEAD(birthday_list);
 
-/* This function is called when the module is loaded. */
+/* 
+   This function is called when the module is loaded. 
+   It initializes the birthday struct vallues, 
+   allocates memory for a struct element and creates 
+   and inserts 6 birthdays into the list. 
+   Then prints each birthday to to the kernel log
+*/
 int birthdayList_init(void) {
 
     printk(KERN_INFO "Loading Module\n");
@@ -64,7 +94,11 @@ int birthdayList_init(void) {
            return 0;
 }
 
-/* This function is called when the module is removed. */
+/* 
+   This function is called when the module is removed. 
+   It prints the list of birthdays being removed, and 
+   then deletes the list from kernel memory           
+*/
 void birthdayList_exit(void) {
 
     printk(KERN_INFO "Removing Module\n");
