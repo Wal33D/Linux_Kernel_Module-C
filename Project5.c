@@ -1,9 +1,9 @@
 /**************************************************************************************
-* Course: CS 4540 – Operating Systems – Fall 2014
-* Assignment <5>  – Process Synchronization
-* Name: <Waleed Gudah>
-* E-mail: <waleed.h.gudah@wmich.edu>
-* Submitted: <12/3/14>
+ Course: CS 4540 – Operating Systems – Fall 2014
+ Assignment <5>  – Process Synchronization
+ Name: <Waleed Gudah>
+ E-mail: <waleed.h.gudah@wmich.edu>
+ Submitted: <12/3/14>
 
    This program, upon loading, initializes the birthday struct values, 
    allocates memory for a struct element and creates 
@@ -25,8 +25,7 @@
         
         "make clear" to clear kernel log 
 
-/****************************************************************************************/
-
+****************************************************************************************/
 
 #include <linux/module.h>   /* Needed by all modules  */
 #include <linux/kernel.h>   /* Needed for KERN_INFO   */
@@ -111,11 +110,15 @@ void birthdayList_exit(void) {
                 ptr->month,
                 ptr->day,
                 ptr->year);
+        /*Delete list using included functions*/
         list_del(&ptr->list);
+        /*free list memory*/
         kfree(ptr);
+    
     }
 
     printk(KERN_INFO "Memory free done\n");
+
 }
 
 /* Macros for registering module entry and exit points. */
