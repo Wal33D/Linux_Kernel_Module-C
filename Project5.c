@@ -5,7 +5,7 @@
 * E-mail: <waleed.h.gudah@wmich.edu>
 * Submitted: <12/3/14>
 
-   This program, upon loading, initializes the birthday struct vallues, 
+   This program, upon loading, initializes the birthday struct values, 
    allocates memory for a struct element and creates 
    and inserts 6 birthdays into the list. 
    Then prints each birthday to to the kernel log. 
