@@ -11,7 +11,7 @@
    Unloading prints the list of birthdays being removed, and 
    then deletes the list from kernel memory    
 
- INSTRUCTIONS: 
+ NOTE: 
         Makefile includes several commands
 
         "make" to compile
