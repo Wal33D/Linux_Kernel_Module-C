@@ -3,13 +3,16 @@
  * Author: Wal33D
  * License: GPL
  *
- * This module demonstrates the use of kernel workqueues to perform deferred tasks.
- * It sets up a workqueue that logs a message to the kernel log periodically.
+ * This module illustrates the use of kernel workqueues to manage deferred tasks.
+ * It initializes a workqueue and schedules a work item that periodically logs a
+ * message to the kernel log. Workqueues are useful for offloading tasks that should
+ * not run in the interrupt context, demonstrating an important asynchronous execution
+ * mechanism in the Linux kernel.
  *
  * Usage:
- *  sudo insmod kernel_workqueue_demo.ko   // To insert the module
- *  dmesg                                 // To view the kernel log messages
- *  sudo rmmod kernel_workqueue_demo      // To remove the module
+ *  sudo insmod kernel_workqueue_module.ko   // To insert the module
+ *  dmesg                                    // To view the kernel log messages
+ *  sudo rmmod kernel_workqueue_module       // To remove the module
  */
 
 #include <linux/module.h>

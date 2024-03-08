@@ -3,12 +3,14 @@
  * Author: Wal33D
  * License: GPL
  *
- * This module demonstrates the use of kernel timers to perform periodic tasks.
- * It sets up a timer that logs a message to the kernel log every 5 seconds.
+ * This module demonstrates the use of kernel timers to execute tasks periodically.
+ * A kernel timer is initialized to trigger a callback function every 5 seconds,
+ * which logs a message to the kernel log. This example showcases the mechanism for
+ * scheduling and handling timed events within the Linux kernel.
  *
  * Usage:
  *  sudo insmod kernel_timer_module.ko   // To insert the module
- *  dmesg                              // To view the kernel log messages
+ *  dmesg                                // To view the kernel log messages
  *  sudo rmmod kernel_timer_module       // To remove the module
  */
 
