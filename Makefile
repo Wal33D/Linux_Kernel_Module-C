@@ -1,6 +1,6 @@
 KBUILD_CFLAGS += -w
-# Add all three modules to the build line
-obj-m += kernel_birthday_list_module.o kernel_timer_module.o kernel_workqueue_module.o
+# Specify the path for the modules relative to the src/ directory
+obj-m += src/kernel_birthday_list_module.o src/kernel_timer_module.o src/kernel_workqueue_module.o
 
 # Default target to compile the kernel modules
 all:
@@ -20,15 +20,15 @@ unload_timer:
 unload_workqueue:
 	sudo rmmod kernel_workqueue_module
 
-# Targets to load the kernel modules
+# Targets to load the kernel modules. Adjust the path for the ko files.
 load_birthday_list:
-	sudo insmod kernel_birthday_list_module.ko
+	sudo insmod src/kernel_birthday_list_module.ko
 
 load_timer:
-	sudo insmod kernel_timer_module.ko
+	sudo insmod src/kernel_timer_module.ko
 
 load_workqueue:
-	sudo insmod kernel_workqueue_module.ko
+	sudo insmod src/kernel_workqueue_module.ko
 
 # Target to clear the kernel log buffer
 clear:
