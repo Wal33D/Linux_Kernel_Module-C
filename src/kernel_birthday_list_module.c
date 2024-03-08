@@ -1,5 +1,5 @@
 /*
- * Enhanced Birthday List Linux Kernel Module
+ * Birthday List Linux Kernel Module
  * Author: Wal33D
  * License: GPL
  *
