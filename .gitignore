@@ -1,3 +1,6 @@
+# Ignore Visual Studio Code directory
 .vscode/
 
+# This line is trying to ignore the .gitignore file itself, which is not effective
+# as .gitignore must be tracked by Git to apply its rules
 .gitignore
