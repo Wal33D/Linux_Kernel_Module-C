@@ -10,9 +10,9 @@
  * birthday records.
  *
  * Usage:
- *  sudo insmod birthday_list.ko num_birthdays=5  // To insert module and specify number of birthdays
+ *  sudo insmod kernel_birthday_list_module.ko num_birthdays=5  // To insert module and specify number of birthdays
  *  dmesg  // To view the kernel log messages
- *  sudo rmmod birthday_list  // To remove the module
+ *  sudo rmmod kernel_birthday_list_module  // To remove the module
  */
 
 #include <linux/module.h>   // Essential for all modules

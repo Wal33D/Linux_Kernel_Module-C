@@ -7,9 +7,9 @@
  * It sets up a timer that logs a message to the kernel log every 5 seconds.
  *
  * Usage:
- *  sudo insmod kernel_timer_demo.ko   // To insert the module
+ *  sudo insmod kernel_timer_module.ko   // To insert the module
  *  dmesg                              // To view the kernel log messages
- *  sudo rmmod kernel_timer_demo       // To remove the module
+ *  sudo rmmod kernel_timer_module       // To remove the module
  */
 
 #include <linux/module.h>

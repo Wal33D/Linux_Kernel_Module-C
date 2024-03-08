@@ -1,6 +1,6 @@
 KBUILD_CFLAGS += -w
 # Add both modules to the build line
-obj-m += kernel_birthday_list_module.o another_kernel_module.o
+obj-m += kernel_birthday_list_module.o kernel_timer_module.o
 
 # Default target to compile the kernel modules
 all:
