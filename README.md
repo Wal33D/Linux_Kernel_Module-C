@@ -60,18 +60,14 @@ sudo rmmod your_module_name
 
 ### Contributing
 
-We welcome contributions from the community! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute to the project. Whether it's adding new features, fixing bugs, or improving documentation, every contribution is appreciated.
+We welcome contributions from the community! Whether it's adding new features, fixing bugs, or improving documentation, every contribution is appreciated.
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License.
 
 ## Support
 
 If you encounter any issues or have questions, feel free to open an issue on the repository's issues page.
 
 Happy coding!
-
----
-
-Note: This README is a template and should be customized to fit the specifics of your project.
