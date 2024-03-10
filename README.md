@@ -63,10 +63,6 @@ sudo rmmod your_module_name
 
 Your contributions breathe life into this project! From refining features, squashing bugs, to enhancing documentation, your input is invaluable.
 
-### License 📜
-
-This project basks in the freedom of the MIT License.
-
 ## Support 🤗
 
 Stumbled upon a challenge? Have queries? Raise an issue on our issue tracker, and let's tackle it together.
