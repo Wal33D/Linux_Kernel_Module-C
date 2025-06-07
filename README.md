@@ -92,7 +92,7 @@ non-production environment before deploying on real hardware.
 
 ### Contributing 🤝
 
-Contributions are the cornerstone of this project's growth and success. Whether it's adding new features, fixing bugs, or improving documentation, your help is greatly appreciated.
+Contributions are the cornerstone of this project's growth and success. Whether it's adding new features, fixing bugs, or improving documentation, your help is greatly appreciated. When opening an issue, please use the templates in `.github/ISSUE_TEMPLATE`. Pull requests should follow the guidelines outlined in `.github/PULL_REQUEST_TEMPLATE`.
 
 ## Support 🤗
 
