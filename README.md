@@ -36,8 +36,8 @@ To begin your kernel module development journey, you'll need:
 
 2. **Clone the Repository**:
    ```bash
-   git clone <repo-url>
-   cd LinuxKernelModule
+   git clone https://github.com/Wal33D/Linux_Kernel_Module-C.git
+   cd Linux_Kernel_Module-C
    ```
 
 3. **Compile Your Module**:
