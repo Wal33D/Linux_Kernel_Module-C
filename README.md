@@ -68,3 +68,7 @@ Contributions are the cornerstone of this project's growth and success. Whether 
 Encountering challenges or have questions? Open an issue in our issue tracker for support and collaboration.
 
 **Start your kernel module development journey today—happy coding!**
+
+## License
+
+All source code and documentation in this repository are released under the [MIT License](LICENSE).

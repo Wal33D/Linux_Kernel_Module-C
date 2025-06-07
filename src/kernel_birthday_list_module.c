@@ -1,7 +1,7 @@
 /*
  * Birthday List Linux Kernel Module
  * Author: Wal33D
- * License: GPL
+ * License: MIT
  *
  * This module demonstrates creating a linked list in kernel space.
  * It allows setting the number of birthday records to create via module parameter 'num_birthdays'
@@ -24,7 +24,7 @@
 
 #define DRIVER_AUTHOR "Wal33D"
 #define DRIVER_DESC   "Enhanced Birthday List Linux Kernel Module"
-#define DRIVER_LICENSE "GPL"
+#define DRIVER_LICENSE "MIT"
 static int num_birthdays = 5; // Default number of birthdays to generate
 
 // Allows setting of num_birthdays at module load time, visible with S_IRUGO permission
