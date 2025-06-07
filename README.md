@@ -63,6 +63,12 @@ After loading your module, inspect its output or interaction with the system usi
 sudo rmmod your_module_name
 ```
 
+## ⚠️ Safety
+
+Loading kernel modules requires root privileges and can potentially crash or hang
+your system. Always test new modules in a virtual machine or other
+non-production environment before deploying on real hardware.
+
 ### Contributing 🤝
 
 Contributions are the cornerstone of this project's growth and success. Whether it's adding new features, fixing bugs, or improving documentation, your help is greatly appreciated.
