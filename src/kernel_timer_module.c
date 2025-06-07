@@ -52,7 +52,7 @@ static void __exit timer_demo_exit(void)
     printk(KERN_INFO "Removing Timer Demo Module\n");
     
     // Delete the timer
-    del_timer(&my_timer);
+    del_timer_sync(&my_timer);
 }
 
 // Register module entry and exit points
