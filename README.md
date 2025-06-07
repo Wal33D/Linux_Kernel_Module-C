@@ -58,9 +58,9 @@ To begin your kernel module development journey, you'll need:
     ```
 
 5. **Run Tests**:
-    After building, you can execute the provided test script (requires root privileges) to automatically insert and remove the sample modules:
+    After building, you can run the provided test script using the Makefile. This step requires root privileges and will automatically insert and remove the sample modules:
     ```bash
-    sudo bash tests/module_test.sh
+    make test
     ```
 
 ### Usage Tips
