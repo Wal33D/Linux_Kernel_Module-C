@@ -1,4 +1,6 @@
-KBUILD_CFLAGS += -w
+# Allow Make to emit compiler warnings by default.  Invoke 'make W=1'
+# to enable additional kernel build warnings.
+KBUILD_CFLAGS +=
 # Specify the path for the modules relative to the src/ directory
 obj-m += src/kernel_birthday_list_module.o src/kernel_timer_module.o src/kernel_workqueue_module.o
 

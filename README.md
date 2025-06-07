@@ -45,6 +45,10 @@ To begin your kernel module development journey, you'll need:
    ```bash
    make
    ```
+   For additional compiler warnings from the kernel build system, you can use:
+   ```bash
+   make W=1
+   ```
 
 4. **Insert Your Module into the Kernel**:
    Load your module into the kernel environment:
