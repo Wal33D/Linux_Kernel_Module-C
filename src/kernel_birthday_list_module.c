@@ -56,6 +56,11 @@ static int __init birthdayList_init(void) {
         birthday *person = kmalloc(sizeof(*person), GFP_KERNEL); // Allocate memory
         if (!person) {
             printk(KERN_ERR "Memory allocation for birthday failed\n");
+            birthday *cur, *tmp;
+            list_for_each_entry_safe(cur, tmp, &birthday_list, list) {
+                list_del(&cur->list);
+                kfree(cur);
+            }
             return -ENOMEM; // Return with out of memory error code
         }
 
