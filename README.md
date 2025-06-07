@@ -63,6 +63,20 @@ After loading your module, inspect its output or interaction with the system usi
 sudo rmmod your_module_name
 ```
 
+### Example Module Usage
+
+Set the timer interval when loading `kernel_timer_module`:
+
+```bash
+sudo insmod src/kernel_timer_module.ko timer_interval=2
+```
+
+Specify the requeue interval for `kernel_workqueue_module`:
+
+```bash
+sudo insmod src/kernel_workqueue_module.ko work_interval=10
+```
+
 ## ⚠️ Safety
 
 Loading kernel modules requires root privileges and can potentially crash or hang
