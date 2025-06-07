@@ -45,16 +45,23 @@ To begin your kernel module development journey, you'll need:
    ```bash
    make
    ```
+   This places the resulting `.ko` files in the `build/` directory.
    For additional compiler warnings from the kernel build system, you can use:
    ```bash
    make W=1
    ```
 
 4. **Insert Your Module into the Kernel**:
-   Load your module into the kernel environment:
-   ```bash
-   sudo insmod your_module_name.ko
-   ```
+    Load your module into the kernel environment:
+    ```bash
+    sudo insmod your_module_name.ko
+    ```
+
+5. **Run Tests**:
+    After building, you can execute the provided test script (requires root privileges) to automatically insert and remove the sample modules:
+    ```bash
+    sudo bash tests/module_test.sh
+    ```
 
 ### Usage Tips
 
@@ -68,13 +75,13 @@ sudo rmmod your_module_name
 Set the timer interval when loading `kernel_timer_module`:
 
 ```bash
-sudo insmod src/kernel_timer_module.ko timer_interval=2
+sudo insmod build/kernel_timer_module.ko timer_interval=2
 ```
 
 Specify the requeue interval for `kernel_workqueue_module`:
 
 ```bash
-sudo insmod src/kernel_workqueue_module.ko work_interval=10
+sudo insmod build/kernel_workqueue_module.ko work_interval=10
 ```
 
 ## ⚠️ Safety
