@@ -4,8 +4,9 @@
  * License: MIT
  *
  * This module demonstrates the use of kernel timers to execute tasks periodically.
- * A kernel timer is initialized to trigger a callback function every 5 seconds,
- * which logs a message to the kernel log. This example showcases the mechanism for
+ * A kernel timer is initialized to trigger a callback function periodically.
+ * The interval can be set when the module is loaded using the `timer_interval`
+ * parameter. Each expiry logs a message to the kernel log. This example showcases the mechanism for
  * scheduling and handling timed events within the Linux kernel.
  *
  * Usage:
@@ -21,7 +22,10 @@
 
 #define DRIVER_AUTHOR "Wal33D"
 #define DRIVER_DESC "Kernel Timer Demo Module"
-#define TIMER_INTERVAL HZ*5 // 5 seconds; HZ is number of ticks per second
+
+static unsigned int timer_interval = 5; // Interval in seconds
+module_param(timer_interval, uint, 0644);
+MODULE_PARM_DESC(timer_interval, "Timer interval in seconds");
 
 static struct timer_list my_timer;
 
@@ -30,8 +34,8 @@ static void timer_callback(struct timer_list *timer)
 {
     printk(KERN_INFO "Timer expired and callback function is called!\n");
     
-    // Reschedule the timer for another TIMER_INTERVAL seconds later
-    mod_timer(timer, jiffies + TIMER_INTERVAL);
+    // Reschedule the timer for another timer_interval seconds later
+    mod_timer(timer, jiffies + timer_interval * HZ);
 }
 
 static int __init timer_demo_init(void)
@@ -42,7 +46,7 @@ static int __init timer_demo_init(void)
     timer_setup(&my_timer, timer_callback, 0);
     
     // Schedule the timer for the first time
-    mod_timer(&my_timer, jiffies + TIMER_INTERVAL);
+    mod_timer(&my_timer, jiffies + timer_interval * HZ);
     
     return 0; // Module successfully loaded
 }
