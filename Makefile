@@ -50,3 +50,7 @@ clear:
 # Target to view the kernel log buffer
 view:
 	dmesg
+
+# Run module tests (requires root privileges)
+test: all
+	sudo bash tests/module_test.sh
