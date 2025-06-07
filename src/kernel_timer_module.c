@@ -1,7 +1,7 @@
 /*
  * Kernel Timer Demo Module
  * Author: Wal33D
- * License: GPL
+ * License: MIT
  *
  * This module demonstrates the use of kernel timers to execute tasks periodically.
  * A kernel timer is initialized to trigger a callback function every 5 seconds,
@@ -60,6 +60,6 @@ module_init(timer_demo_init);
 module_exit(timer_demo_exit);
 
 // Set module metadata
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("MIT");
 MODULE_AUTHOR(DRIVER_AUTHOR);
 MODULE_DESCRIPTION(DRIVER_DESC);
