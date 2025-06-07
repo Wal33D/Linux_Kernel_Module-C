@@ -102,4 +102,6 @@ Encountering challenges or have questions? Open an issue in our issue tracker fo
 
 ## License
 
-All source code and documentation in this repository are released under the [MIT License](LICENSE).
+All source code and documentation in this repository are released under the [MIT License](LICENSE),
+except for `src/kernel_workqueue_module.c` which is licensed under the GNU
+General Public License (GPL) because it uses GPL-only kernel symbols.

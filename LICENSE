@@ -20,5 +20,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-All files in this repository, including the kernel modules in the `src`
-directory, are licensed under the MIT License.
+All files in this repository are licensed under the MIT License except
+`src/kernel_workqueue_module.c`, which is licensed under the GNU General
+Public License (GPL) because it relies on GPL-only kernel symbols.
