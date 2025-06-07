@@ -8,3 +8,11 @@
 Module.symvers
 modules.order
 .tmp_versions/
+
+# Local build output
+build/
+
+# Test binaries
+tests/*.o
+tests/*.ko
+tests/*.out

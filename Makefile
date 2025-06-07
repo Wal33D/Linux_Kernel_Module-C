@@ -4,13 +4,24 @@ KBUILD_CFLAGS +=
 # Specify the path for the modules relative to the src/ directory
 obj-m += src/kernel_birthday_list_module.o src/kernel_timer_module.o src/kernel_workqueue_module.o
 
-# Default target to compile the kernel modules
+# Directory to place built kernel object files
+BUILD_DIR ?= build
+
+# Module names without extension for convenience
+MODULES := kernel_birthday_list_module kernel_timer_module kernel_workqueue_module
+
+# Default target to compile the kernel modules and place output in $(BUILD_DIR)
 all:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	mkdir -p $(BUILD_DIR)
+	$(MAKE) -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	@for m in $(MODULES); do \
+	if [ -f src/$$m.ko ]; then mv -f src/$$m.ko $(BUILD_DIR)/; fi; \
+	done
 
 # Target to clean up build artifacts
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	        rm -rf $(BUILD_DIR)
 
 # Targets to unload the kernel modules
 unload_birthday_list:
@@ -24,13 +35,13 @@ unload_workqueue:
 
 # Targets to load the kernel modules. Adjust the path for the ko files.
 load_birthday_list:
-	sudo insmod src/kernel_birthday_list_module.ko
+	        sudo insmod $(BUILD_DIR)/kernel_birthday_list_module.ko
 
 load_timer:
-	sudo insmod src/kernel_timer_module.ko
+	        sudo insmod $(BUILD_DIR)/kernel_timer_module.ko
 
 load_workqueue:
-	sudo insmod src/kernel_workqueue_module.ko
+	        sudo insmod $(BUILD_DIR)/kernel_workqueue_module.ko
 
 # Target to clear the kernel log buffer
 clear:
