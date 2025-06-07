@@ -1,7 +1,7 @@
 /*
  * Kernel Workqueue Demo Module
  * Author: Wal33D
- * License: MIT
+ * License: GPL
  *
  * This module illustrates the use of kernel workqueues to manage deferred tasks.
  * It initializes a workqueue and schedules a work item that periodically logs a
@@ -84,6 +84,6 @@ module_init(workqueue_demo_init);
 module_exit(workqueue_demo_exit);
 
 // Set module metadata
-MODULE_LICENSE("MIT");
+MODULE_LICENSE("GPL");
 MODULE_AUTHOR(DRIVER_AUTHOR);
 MODULE_DESCRIPTION(DRIVER_DESC);
